@@ -53,13 +53,14 @@ set fileencodings=utf-8,chinese,latin-1
 " and Amix did not provide one in his file
 " I just provide one
 func! MySys()
-  return "mswin"
+  return "linux"
 endfunc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 if MySys() == "linux"
-  set gfn=Monospace\ 12
+  set gfn=Droid\ Sans\ Mono\ Regular\ 12
   set encoding=utf-8
+  set background=dark "prefer dark bg color whatsoever
 elseif MySys() == "mswin"
   set gfn=Courier\ New:h10
   set fileencoding=chinese
@@ -74,10 +75,13 @@ endif
 if has("gui_running")
   set guioptions-=T
   "let psc_style='cool'
-  set guifont=Courier\ New:h12
+  if MySys() == "linux"
+    set guifont=Droid\ Sans\ Mono\ Regular\ 12
+  else
+    set guifont=Courier\ New:h12
+  endif
   " source /ms/user/s/shiyel/.vim/evening.vim
   colorscheme solarized
-  "colorscheme darkblue
   set background=dark "prefer dark bg color whatsoever
 else
   set background=dark
