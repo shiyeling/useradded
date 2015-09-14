@@ -41,4 +41,15 @@ sudo mount /mnt/ramdisk
 sudo mkdir /var/ramdisk
 # Create a script at /etc/init.d/ramdisk with the contents in script named ramdisk.sh in resource folder
 # follow the below article to create new fedora service.
-https://kezhong.wordpress.com/2011/11/19/creating-my-own-systemd-service-files-on-fedora-16x86_64/
+# https://kezhong.wordpress.com/2011/11/19/creating-my-own-systemd-service-files-on-fedora-16x86_64/
+# https://coreos.com/docs/launching-containers/launching/getting-started-with-systemd/
+# http://www.freedesktop.org/software/systemd/man/systemd.service.html
+copy the ramdisk-lzop.sh file to /usr/local/bin
+# copy the ramdisksync.service file to /lib/systemd/system/
+sudo cp resource/ramdisksync.service /lib/systemd/system/
+#make symbol link: 
+sudo ln -s /lib/systemd/system/ramdisksync.service /etc/systemd/system/ramdisksync.service
+
+sudo systemctl daemon-reload
+sudo systemctl start ramdisksync.service
+ sudo systemctl enable ramdisksync.service

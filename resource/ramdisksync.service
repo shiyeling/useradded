@@ -1,0 +1,13 @@
+[Unit]
+Description=Ramdisk Sync Service
+After=mnt-ramdisk.mount
+Requires=mnt-ramdisk.mount
+
+[Service]
+Type=simple
+TimeoutStartSec=0
+ExecStart=/usr/local/bin/ramdisk-lzop.sh start
+ExecStop=/usr/local/bin/ramdisk-lzop.sh stop
+
+[Install]
+WantedBy=multi-user.target
