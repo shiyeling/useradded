@@ -10,3 +10,5 @@ alias gstat='git status'
 alias gdiff='git diff'
 alias gcmit='git commit'
 alias gadd='git add'
+export SWT_GTK3=0
+export GTK2_RC_FILES=~/.gtkrc

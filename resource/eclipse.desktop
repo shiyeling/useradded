@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Exec=/home/yshi/tools/eclipse/eclipse --launcher.GTK_version 2
+Name=Eclipse Mars
+Comment=Eclipse Mars
+Terminal=false
+NoDisplay=false
+Icon=/home/yshi/tools/eclipse/icon.xpm
