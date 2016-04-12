@@ -20,5 +20,5 @@ sudo yum install nodejs npm
 curl https://install.meteor.com/ | sh
 #git
 git config --global user.name "Yeling Shi"
-git config --global user.email yeling.shi@calix.com
+git config --global user.email shyl@zqykj.com
 git config --global push.default upstream
