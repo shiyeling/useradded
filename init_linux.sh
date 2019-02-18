@@ -22,3 +22,6 @@ curl https://install.meteor.com/ | sh
 git config --global user.name "Yeling Shi"
 git config --global user.email shyl@zqykj.com
 git config --global push.default upstream
+git config --global i18n.commitencoding utf-8
+git config --global i18n.logoutputencoding utf-8
+git config --global core.quotepath false 
